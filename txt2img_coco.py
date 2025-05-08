@@ -98,6 +98,7 @@ def check_safety(x_image):
 def main():
     parser = argparse.ArgumentParser()
 
+    print("Reading arguments")
     parser.add_argument(
         "--prompt",
         type=str,
@@ -253,9 +254,11 @@ def main():
     seed_everything(opt.seed)
 
     config = OmegaConf.load(f"{opt.config}")
+    print("Loading stable_diffusion weights")
     model = load_model_from_config(config, f"{opt.ckpt}")
 
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    print(f"Moving model to: {device}")
     model = model.to(device)
 
     if opt.dpm_solver:
