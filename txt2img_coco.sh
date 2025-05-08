@@ -7,6 +7,11 @@ python txt2img_coco.py \
         --ddim_steps 50 \
         --plms \
         --skip_grid \
-        --ckpt ./_model_pool/sd-v1-4-full-ema.ckpt \
-        --from-file './name_of_your_coco_captions_file.txt' \
-        --outdir './path_of_your_targeted_images' \
+        --ckpt /home/swf_developer/storage/checkpoints/stable_diffusion/sd-v1-4-full-ema.ckpt \
+        --from-file '/home/swf_developer/stable-diffusion/scripts/coco_captions_10000.txt' \
+        --outdir '/home/swf_developer/storage/attack/targeted_images' \
+
+
+
+        
+
