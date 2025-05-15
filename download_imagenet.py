@@ -10,4 +10,4 @@ for i, example in enumerate(dataset):
     image = example['image']  # This is a PIL.Image
     file_name = f"img_{i:05d}"
     print(f'saving file: {file_name}')
-    image.save(f"/home/swf_developer/storage/attack/clean_images/{file_name}.jpg")
+    image.save(f"/home/swf_developer/storage/attack/imagenet_clean_images/{file_name}.jpg")
